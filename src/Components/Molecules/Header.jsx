@@ -47,7 +47,7 @@ function Header(){
 
             <header 
     id={styleAnimation.header}
-    className="bg-white drop-shadow-xl p-2 px-4 sm:px-6 md:px-10 flex items-center justify-center gap-6 sm:gap-10 md:gap-20 sticky top-0 z-50">
+    className="bg-white drop-shadow-xl p-2 px-4 sm:px-6 md:px-10 flex items-center justify-center gap-6 sm:gap-10 md:gap-20 fixed top-0 left-0 w-full z-50">
 
     <img 
         src={menu} 

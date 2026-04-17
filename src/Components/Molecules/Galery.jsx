@@ -77,14 +77,11 @@ const prev = () => {
     useEffect(() => {
         if (modal) {
             document.body.style.overflow = "hidden";
-            document.documentElement.style.overflow = "hidden"; // Para asegurar en todos los navegadores
         } else {
             document.body.style.overflow = "";
-            document.documentElement.style.overflow = "";
         }
         return () => {
             document.body.style.overflow = "";
-            document.documentElement.style.overflow = "";
         };
     }, [modal]);
 
