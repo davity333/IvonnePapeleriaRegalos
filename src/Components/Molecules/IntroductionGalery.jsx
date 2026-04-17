@@ -7,9 +7,9 @@ import ScrollReveal from "../Atoms/ScrollReveal";
 function IntroductionGalery(){
     return(
         <ScrollReveal animation="blur-in">
-                <div className="flex flex-col md:flex-row justify-center p-6 md:p-10 items-center gap-3 md:gap-5 text-center md:text-left">
+                <div className="flex flex md:flex-row justify-center p-5 sm:p-10 items-center gap-3 md:gap-5 text-center md:text-left">
                     <div className="flex flex-col text-center">
-                        <p id={styleFont.passionOne} className="text-3xl md:text-5xl text-[#85E490]">
+                        <p id={styleFont.passionOne} className="text-[6vh] text-[#85E490] sm:text-5xl text-start sm:text-center">
                             GALERIA
                         </p>
                     </div>

@@ -80,7 +80,7 @@ function Contacto() {
                 <div className="flex-1 flex flex-col">
                     <p id={styleFont.jockey} className="text-[4vh] text-[#8A8C93]">¿Algo en especial?</p>
                     <p className="opacity-60 text-[2.7vh] max-w-[50ch] leading-7 mt-3">
-                        Escuela, oficina, regalos, abarrotes o trabajos de computadora. Cuéntanos qué buscas y te responderemos por WhatsApp.
+                        Escuela, oficina, regalos o trabajos de computadora. Cuéntanos qué buscas y te responderemos por WhatsApp.
                     </p>
                     <div className={style.containerImagenes}>
                         <img src={oficina} className={`${style.oficina} object-cover`} />

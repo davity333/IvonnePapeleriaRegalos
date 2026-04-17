@@ -67,7 +67,7 @@ function Welcome(){
                     Materiales de calidad, precios accesibles y el trato que te mereces
                 </p>
                 <p className="text-[2.5vh] md:text-[3vh] text-[#0000007f] max-w-[38ch] leading-7">
-                    Materiales, regalos, snacks y productos de abarrotes en un solo lugar
+                    Materiales, regalos, snacks y productos en un solo lugar
                 </p>
             </div>
 

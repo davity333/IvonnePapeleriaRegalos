@@ -46,34 +46,35 @@ function Header(){
         </div>
 
             <header 
-            id={styleAnimation.header}
-            className="bg-white drop-shadow-xl p-2 flex items-center justify-center gap-10 sm:gap-28 sticky top-0 z-50">
+    id={styleAnimation.header}
+    className="bg-white drop-shadow-xl p-2 px-4 sm:px-6 md:px-10 flex items-center justify-center gap-6 sm:gap-10 md:gap-20 sticky top-0 z-50">
 
-                <img 
-                    src={menu} 
-                    alt="menu" 
-                    className="w-8 md:hidden absolute left-4 cursor-pointer"
-                    onClick={() => setOpen(!open)}
-                />
+    <img 
+        src={menu} 
+        alt="menu" 
+        className="w-8 md:hidden absolute left-4 cursor-pointer"
+        onClick={() => setOpen(!open)}
+    />
 
-                <nav className="hidden md:flex gap-10 border-4">
-                    <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("presentacion")}>Presentación</span>
-                    <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("eligenos")}>Eligenos</span>
-                    <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("ofrecemos")}>Ofrecemos</span>
-                </nav>
+    <nav className="hidden md:flex gap-6 lg:gap-10">
+        <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("presentacion")}>Presentación</span>
+        <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("eligenos")}>Eligenos</span>
+        <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("ofrecemos")}>Ofrecemos</span>
+    </nav>
 
-                <div className="grid justify-center text-center border-2">
-                    <img src={logo} alt="logo" className="w-14 justify-self-center"/>
-                    <p id={fontStyle.jockey} className="text-[#B3AC89] text-sm">IVONNE PAPELERIA Y REGALOS</p>
-                </div>
- 
-                <nav className="hidden md:flex gap-10 border-4">
-                    <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("galeria")}>Galeria</span>
-                    <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("ubicacion")}>Ubicación</span>
-                    <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("contacto")}>Contacto</span>
-                </nav>
+    <div className="grid justify-center text-center">
+        <img src={logo} alt="logo" className="w-12 md:w-14 justify-self-center"/>
+        <p id={fontStyle.jockey} className="text-[#B3AC89] text-sm">IVONNE PAPELERIA Y REGALOS</p>
+    </div>
 
-            </header>
+    <nav className="hidden md:flex gap-6 lg:gap-10">
+        <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("galeria")}>Galeria</span>
+        <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("ubicacion")}>Ubicación</span>
+        <span id={fontStyle.inder} className="hover:text-[#B3AC89] transition-colors duration-200 cursor-pointer text-[#0000009e]" onClick={() => scrollTo("contacto")}>Contacto</span>
+    </nav>
+
+</header>
+
         </>
     )
 }
