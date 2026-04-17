@@ -44,7 +44,7 @@ function Location() {
                         </p>
 
                         <a 
-                            href="https://www.google.com/maps/..."
+                            href="https://www.google.com/maps/@16.2057325,-95.2074197,3a,75y,353.03h,65.47t/data=!3m7!1e1!3m5!1sO0b-rPxUUbb-bXaUKrcncQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D24.529344806566087%26panoid%3DO0b-rPxUUbb-bXaUKrcncQ%26yaw%3D353.03199536773525!7i16384!8i8192?hl=es-419&entry=ttu&g_ep=EgoyMDI2MDQxNC4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank"
                             rel="noreferrer"
                             className="bg-[#DE9092] text-white p-5 px-7 rounded-full mt-7
