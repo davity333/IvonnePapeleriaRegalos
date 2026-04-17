@@ -14,7 +14,7 @@ function IntroductionOffer(){
                 </div>
 
                 <div>
-                    <img src={porcentaje} alt="estrella" className="size-20 animate-bounce" />
+                    <img src={porcentaje} alt="ofrecemos" className="size-20 shrink-0 animate-bounce" />
                 </div>
             </div>
             <CardsOffer></CardsOffer>

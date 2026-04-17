@@ -12,7 +12,7 @@ function HomePage(){
 <>
     <div className={style.mask}></div>
 
-    <div>
+    <div className="overflow-x-hidden">
         <Header />
         <IntroductionOrg />
         <EligenosOrg></EligenosOrg>
