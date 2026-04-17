@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { createPortal } from "react-dom"
 import botonIzquierda from "../../../public/icons/botonIzquierdo.png"
 import botonDerecho from "../../../public/icons/botonDerecho.png"
 import tienda from "../../../public/tienda.png"
@@ -72,6 +73,21 @@ const prev = () => {
         return () => window.removeEventListener("keydown", handleEsc)
     }, [])
 
+    // Bloquear scroll cuando el modal está abierto
+    useEffect(() => {
+        if (modal) {
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden"; // Para asegurar en todos los navegadores
+        } else {
+            document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
+        };
+    }, [modal]);
+
     return(
        <section className="px-2  md:px-24">
             <div className={style.container}>
@@ -139,7 +155,7 @@ const prev = () => {
 
 
                     {/* 🔵 MODAL */}
-                    {modal && (
+                    {modal && createPortal(
                         <div className={style.modal} onClick={() => setModal(null)}>
                             <div className={style.modalContent} onClick={(e)=>e.stopPropagation()}>
                                 
@@ -150,7 +166,8 @@ const prev = () => {
                                 <img src={modal.image} className={style.modalImg}/>
                                 <p>{modal.titulo}</p>
                             </div>
-                        </div>
+                        </div>,
+                        document.body
                     )}
 
             </div>
