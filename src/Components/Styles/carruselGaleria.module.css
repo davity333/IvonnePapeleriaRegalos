@@ -1,0 +1,239 @@
+/*CARRUSEL DE GALERIA----------------------------------------------------*/
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.descripcion{
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 🔴 CARRUSEL */
+/* CONTENEDOR */
+.carrusel{
+    position: relative;
+    width: 100%;
+    padding: 0 50px; /* 🔥 espacio para botones */
+}
+
+/* VENTANA */
+.viewport{
+    overflow: hidden;
+    width: 100%;
+}
+
+/* TRACK (se mueve) */
+.track{
+    display: flex;
+    transition: transform .5s ease;
+}
+
+/* CADA CARD */
+.card{
+    min-width: calc(100% / var(--visible));
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img{
+    width: 100%;
+    aspect-ratio: 16/9; /* 🔥 magia aquí */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* BOTONES */
+.btnLeft, .btnRight{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.btnLeft{ left: 0; }
+.btnRight{ right: 0; }
+
+.btnLeft img, .btnRight img{
+    width: 40px;
+}
+
+.btnLeft:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btnRight:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* FADE */
+.fadeLeft, .fadeRight{
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 5;
+}
+
+.fadeLeft{
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.fadeRight{
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+
+/* 🟢 COLLAGE */
+.collage{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.big img{
+    width: 100%;
+    height: 73vh;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right img{
+    width: 100%;
+    height: 36vh;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+
+/* 🔵 MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modalContent{
+    position: relative;
+    max-width: 90%;
+    text-align: center;
+}
+
+.modalImg{
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close{
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close img{
+    width: 30px;
+}
+
+.modal p{
+    color: white;
+    margin-top: 10px;
+}
+
+
+/* 📱 RESPONSIVE */
+/* 📱 RESPONSIVE - mobile */
+@media(max-width: 768px){
+
+    /* RESPONSIVE - quita padding lateral de la seccion */
+    :global(section){
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    /* RESPONSIVE - collage en columna, imagenes mas grandes */
+    .collage{
+        grid-template-columns: 1fr;
+    }
+
+    /* RESPONSIVE - imagenes del collage con altura fija visible */
+    .big img{
+        height: 220px;
+    }
+
+    .right{
+        flex-direction: row;
+        height: 150px;
+    }
+
+    .right img{
+        height: 150px;
+    }
+
+    /* RESPONSIVE - botones mas adentro para no cortarse */
+    .btnLeft{ left: 5px; }
+    .btnRight{ right: 5px; }
+
+    /* RESPONSIVE - menos padding en cards del carrusel */
+    .card{
+        padding: 5px;
+    }
+
+    /* RESPONSIVE - imagenes del carrusel mas altas en mobile */
+    .card img{
+        aspect-ratio: 4/3;
+    }
+
+    /* RESPONSIVE - modal ocupa casi toda la pantalla */
+    .modalContent{
+        max-width: 98%;
+    }
+}
+
+@media(max-width:768px){
+
+    .carrusel{
+        padding: 0 30px; /* menos espacio en móvil */
+    }
+
+    .btnLeft{ left: 0; }
+    .btnRight{ right: 0; }
+
+    .descripcion{
+        font-size: 12px;
+    }
+}

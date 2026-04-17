@@ -1,0 +1,48 @@
+/*HEADER*/
+.menuContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 2rem 1rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    display: flex;          /* ← agrego */
+    flex-direction: column; /* ← agrego */
+    padding-top: 3rem;      /* ← espacio arriba */
+}
+
+.menuOpen {
+    transform: translateX(0);
+}
+
+.menuItem {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #0000009e;
+    cursor: pointer;
+    display: block; /* ← agrego */
+}
+
+.menuItem:hover {
+    color: #B3AC89;
+}
+
+.closeBtn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #0000009e;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.closeBtn:hover {
+    color: #B3AC89;
+}
